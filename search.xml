@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/08/14/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>codeblocks编译运行c++文件显示“不支持的16位应用程序，与64位版本的Windows不兼容”的解决办法</title>
+    <url>/2021/08/15/codeblocks%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8Cc-%E6%96%87%E4%BB%B6%E6%98%BE%E7%A4%BA%E2%80%9C%E4%B8%8D%E6%94%AF%E6%8C%81%E7%9A%8416%E4%BD%8D%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E4%B8%8E64%E4%BD%8D%E7%89%88%E6%9C%AC%E7%9A%84Windows%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%9D%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>有一天我想写一个东西来实现一下自己脑子里的思路，编译运行的时候却显示了这个东西<img src="https://img-blog.csdnimg.cn/20200319143305983.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0plZ3JldA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>我上网查了很多，有人说应该把腾讯手游助手等腾讯的游戏软件卸载，可是等我卸载后却并没有解决问题。<br>后来，我突发奇想打开了以前写的cpp文件，发现他竟然能够编译运行！！！（卸载腾讯手游助手后）<br>我又创建了一个新的文件，发现竟然也能运行！！！<br>只有这一个cpp文件不能运行，于是我把这个cpp文件删除了，完美地解决了这个问题。</p>
+<p>这可能因为腾讯手游助手等软件只要你运行过后，他就会修改你系统的某些东西。当你在  有腾讯手游助手  的背景下运行codeblocks的文件时，那么这个文件一但编译运行，他的内在就被修改了，即使你把腾讯手游助手卸载了，它也被修改了，所以这个文件就完了。（这就是一开始我以为卸载后没有解决问题的原因，因为我还在死扣那个坏文件）<br>但是当你把腾讯手游助手这类软件卸载了，再打开以前写的文件，由于他没有在 有腾讯手游助手  的背景下编译运行过，所以他没事，能够正常使用，同理，创建新文件能运行也是这个道理。<br>总的来说，应该就是腾讯手游助手这类软件为了游戏的正常使用而不得已修改一些系统的东西，造成了这个后果，将其卸载后再把不能运行的cpp（cbp）文件删除即可得到舒服的codeblocks使用环境了。</p>
 ]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>codeblocks, C++</tag>
+      </tags>
   </entry>
 </search>
