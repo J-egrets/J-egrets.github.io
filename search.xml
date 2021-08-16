@@ -67,29 +67,6 @@
       </tags>
   </entry>
   <entry>
-    <title>c++重载运算符时返回值为类的对象或者返回对象的引用</title>
-    <url>/2020/08/02/c-%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6%E6%97%B6%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%BA%E7%B1%BB%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%88%96%E8%80%85%E8%BF%94%E5%9B%9E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8/</url>
-    <content><![CDATA[<p>最终的目的是为了进行连续的运算</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">a = b + c + d; <span class="comment">//不只是两个对象相加，是为了两个以上的对象的相加</span></span><br></pre></td></tr></table></figure>
-<p>以上面的代码为例，假设a,b,c,d都是同一个类（classA）的不同对象，假如我重载这个类的加号时，返回值类型不是此类或者他的引用，如下</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="keyword">operator</span>+(classA &amp;a, classA &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//加法运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>那么在我最上面的代码中，b + c 的值就为空（或者其他类型），那么这个得出来的值就没有办法继续和d来进行加法的运算，也没有办法赋值给a了，这也就无法实现我所期望的连续运算的目的。<br>所以，<font color="red">c++重载运算符时返回值为类的对象是为了实现连续的运算(大多数这种运算其实是赋值运算或者&lt;&lt;    &gt;&gt;)</font><br>如果你以后要重载运算符，有什么连续运算的需要，就可以使用这种方法，不过最好也要遵守c++中一些语法的规定，不要重载出来的东西让人摸不着头脑</p>
-<p>那么，现在讲为什么有一些函数要返回对象的引用，这其实是为了提高程序的运行效率，众所周知，当一个函数返回一个值时，他并不是将你在此函数里面原有的你想要的那个值返回，而是将你想要的那个值，复制一下，然后把这个复制出来的值给返回，如下</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">classA <span class="keyword">operator</span>+(classA &amp;a, classA &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">	classA temp;</span><br><span class="line">	<span class="comment">//加法运算</span></span><br><span class="line">	<span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>代码最终返回的并不是你在函数里定义的那个temp，而是将temp复制了一份，将复制的那份返回了，函数里定义的那个temp在函数运行结束后就释放了。同理，就算你没有在函数里面新建东西，而是直接返回通过a和b运算出来的一些东西（<font color="red">或者你直接返回*this</font>），他也要复制一下。</p>
-<p>所以，只要你不采用返回类的对象，而是返回类的对象的引用，就不会复制，也即不会调用类的复制构造函数，也即提升了程序的效率</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">classA &amp; <span class="keyword">operator</span>+(classA &amp;a, classA &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//加法运算</span></span><br><span class="line">	<span class="comment">//a.time = a.time + b.time; //假设time是此类的一个属性</span></span><br><span class="line">	<span class="comment">//return a;</span></span><br><span class="line">	<span class="comment">//加法只有这样可以实现连续的运算，有些鸡肋，但是=，&lt;&lt;，&gt;&gt;,就很好用了</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><font color="red">所以，当你重载的运算符需要连续的运算时，你可以返回他的类的对象。如果你想要减少不必要的开销（复制构造函数），提高程序效率，并且你返回的对象是需要作为左值的话，那么你可以返回他的引用</font></p>
-<p><font color="red">不过绝大部分  返回对象  或者  他的引用  实现连续运算，都是用在重载 赋值运算符= 或者 插入运算符&lt;&lt; 或者 提取运算符&gt;&gt; 中的。那里面比较好用，其他的如加法那些，连续运算就很鸡肋，也比较难实现，但是返回引用可以提升效率却是真真的好啊</font></p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>c++中单继承构造函数与析构函数的调用顺序</title>
     <url>/2020/08/05/c-%E4%B8%AD%E5%8D%95%E7%BB%A7%E6%89%BF%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E9%A1%BA%E5%BA%8F/</url>
     <content><![CDATA[<p>在c++的单继承中，构造函数有3个需要调用的地方</p>
@@ -192,6 +169,29 @@
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">10</span>];<span class="keyword">char</span> b;</span><br><span class="line">   cin.<span class="built_in">get</span>(a,<span class="number">10</span>,<span class="string">&#x27;,&#x27;</span>);<span class="comment">// get</span></span><br><span class="line">cin.<span class="built_in">get</span>(b);</span><br><span class="line">cout&lt;&lt;a&lt;&lt;endl&lt;&lt;b;</span><br><span class="line"><span class="comment">//输入12345，回车</span></span><br><span class="line"><span class="comment">//输出12345【换行】，</span></span><br><span class="line"><span class="comment">//注意，因为缓冲区里面还有逗号（结束字符），</span></span><br><span class="line"><span class="comment">//所以在get单个字符的时候，就直接把这个结束字符获取了</span></span><br><span class="line"><span class="comment">//cin.get(a,10,&#x27;,&#x27;)把12345到a中，遇到&#x27;,&#x27;结束，但是不把&#x27;,&#x27;删除，而把&#x27;,&#x27;输入到b中</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">10</span>];<span class="keyword">char</span> b;</span><br><span class="line">   cin.<span class="built_in">getline</span>(a,<span class="number">10</span>,<span class="string">&#x27;,&#x27;</span>); <span class="comment">//getline</span></span><br><span class="line">cin.<span class="built_in">get</span>(b);</span><br><span class="line">cout&lt;&lt;a&lt;&lt;endl&lt;&lt;<span class="built_in"><span class="keyword">int</span></span>(b);</span><br><span class="line"><span class="comment">//输入12345，回车</span></span><br><span class="line"><span class="comment">//输出12345【换行】10</span></span><br><span class="line"><span class="comment">//cin.getline(a,10,&#x27;,&#x27;)把12345输入到a中，遇到’，‘结束，并删除缓冲区的‘,’，</span></span><br><span class="line"><span class="comment">//后面的[enter]输入到b中</span></span><br><span class="line"><span class="comment">//回车的ascil码为10</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c++重载运算符时返回值为类的对象或者返回对象的引用</title>
+    <url>/2020/08/02/c-%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6%E6%97%B6%E8%BF%94%E5%9B%9E%E5%80%BC%E4%B8%BA%E7%B1%BB%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%88%96%E8%80%85%E8%BF%94%E5%9B%9E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8/</url>
+    <content><![CDATA[<p>最终的目的是为了进行连续的运算</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">a = b + c + d; <span class="comment">//不只是两个对象相加，是为了两个以上的对象的相加</span></span><br></pre></td></tr></table></figure>
+<p>以上面的代码为例，假设a,b,c,d都是同一个类（classA）的不同对象，假如我重载这个类的加号时，返回值类型不是此类或者他的引用，如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="keyword">operator</span>+(classA &amp;a, classA &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//加法运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么在我最上面的代码中，b + c 的值就为空（或者其他类型），那么这个得出来的值就没有办法继续和d来进行加法的运算，也没有办法赋值给a了，这也就无法实现我所期望的连续运算的目的。<br>所以，<font color="red">c++重载运算符时返回值为类的对象是为了实现连续的运算(大多数这种运算其实是赋值运算或者&lt;&lt;    &gt;&gt;)</font><br>如果你以后要重载运算符，有什么连续运算的需要，就可以使用这种方法，不过最好也要遵守c++中一些语法的规定，不要重载出来的东西让人摸不着头脑</p>
+<p>那么，现在讲为什么有一些函数要返回对象的引用，这其实是为了提高程序的运行效率，众所周知，当一个函数返回一个值时，他并不是将你在此函数里面原有的你想要的那个值返回，而是将你想要的那个值，复制一下，然后把这个复制出来的值给返回，如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">classA <span class="keyword">operator</span>+(classA &amp;a, classA &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">	classA temp;</span><br><span class="line">	<span class="comment">//加法运算</span></span><br><span class="line">	<span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代码最终返回的并不是你在函数里定义的那个temp，而是将temp复制了一份，将复制的那份返回了，函数里定义的那个temp在函数运行结束后就释放了。同理，就算你没有在函数里面新建东西，而是直接返回通过a和b运算出来的一些东西（<font color="red">或者你直接返回*this</font>），他也要复制一下。</p>
+<p>所以，只要你不采用返回类的对象，而是返回类的对象的引用，就不会复制，也即不会调用类的复制构造函数，也即提升了程序的效率</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">classA &amp; <span class="keyword">operator</span>+(classA &amp;a, classA &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//加法运算</span></span><br><span class="line">	<span class="comment">//a.time = a.time + b.time; //假设time是此类的一个属性</span></span><br><span class="line">	<span class="comment">//return a;</span></span><br><span class="line">	<span class="comment">//加法只有这样可以实现连续的运算，有些鸡肋，但是=，&lt;&lt;，&gt;&gt;,就很好用了</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><font color="red">所以，当你重载的运算符需要连续的运算时，你可以返回他的类的对象。如果你想要减少不必要的开销（复制构造函数），提高程序效率，并且你返回的对象是需要作为左值的话，那么你可以返回他的引用</font></p>
+<p><font color="red">不过绝大部分  返回对象  或者  他的引用  实现连续运算，都是用在重载 赋值运算符= 或者 插入运算符&lt;&lt; 或者 提取运算符&gt;&gt; 中的。那里面比较好用，其他的如加法那些，连续运算就很鸡肋，也比较难实现，但是返回引用可以提升效率却是真真的好啊</font></p>
 ]]></content>
       <categories>
         <category>C++</category>
