@@ -201,6 +201,19 @@
       </tags>
   </entry>
   <entry>
+    <title>codeblocks编译运行c++文件显示“不支持的16位应用程序，与64位版本的Windows不兼容”的解决办法</title>
+    <url>/2020/03/19/codeblocks%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8Cc-%E6%96%87%E4%BB%B6%E6%98%BE%E7%A4%BA%E2%80%9C%E4%B8%8D%E6%94%AF%E6%8C%81%E7%9A%8416%E4%BD%8D%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E4%B8%8E64%E4%BD%8D%E7%89%88%E6%9C%AC%E7%9A%84Windows%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%9D%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>有一天我想写一个东西来实现一下自己脑子里的思路，编译运行的时候却显示了这个东西<img src="https://img-blog.csdnimg.cn/20200319143305983.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0plZ3JldA==,size_16,color_FFFFFF,t_70"><br>我上网查了很多，有人说应该把腾讯手游助手等腾讯的游戏软件卸载，可是等我卸载后却并没有解决问题。<br>后来，我突发奇想打开了以前写的cpp文件，发现他竟然能够编译运行！！！（卸载腾讯手游助手后）<br>我又创建了一个新的文件，发现竟然也能运行！！！<br>只有这一个cpp文件不能运行，于是我把这个cpp文件删除了，完美地解决了这个问题。</p>
+<p>这可能因为腾讯手游助手等软件只要你运行过后，他就会修改你系统的某些东西。当你在  有腾讯手游助手  的背景下运行codeblocks的文件时，那么这个文件一但编译运行，他的内在就被修改了，即使你把腾讯手游助手卸载了，它也被修改了，所以这个文件就完了。（这就是一开始我以为卸载后没有解决问题的原因，因为我还在死扣那个坏文件）<br>但是当你把腾讯手游助手这类软件卸载了，再打开以前写的文件，由于他没有在 有腾讯手游助手  的背景下编译运行过，所以他没事，能够正常使用，同理，创建新文件能运行也是这个道理。<br>总的来说，应该就是腾讯手游助手这类软件为了游戏的正常使用而不得已修改一些系统的东西，造成了这个后果，将其卸载后再把不能运行的cpp（cbp）文件删除即可得到舒服的codeblocks使用环境了。</p>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>codeblocks</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>typora使用基本语法</title>
     <url>/2020/08/16/typora%E4%BD%BF%E7%94%A8%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>在文章开头<em>（其实是任意位置，只不过习惯放在开头）</em>的地方键入[toc], 即可插入目录。</p>
@@ -323,19 +336,6 @@
       </tags>
   </entry>
   <entry>
-    <title>codeblocks编译运行c++文件显示“不支持的16位应用程序，与64位版本的Windows不兼容”的解决办法</title>
-    <url>/2020/03/19/codeblocks%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8Cc-%E6%96%87%E4%BB%B6%E6%98%BE%E7%A4%BA%E2%80%9C%E4%B8%8D%E6%94%AF%E6%8C%81%E7%9A%8416%E4%BD%8D%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E4%B8%8E64%E4%BD%8D%E7%89%88%E6%9C%AC%E7%9A%84Windows%E4%B8%8D%E5%85%BC%E5%AE%B9%E2%80%9D%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>有一天我想写一个东西来实现一下自己脑子里的思路，编译运行的时候却显示了这个东西<img src="https://img-blog.csdnimg.cn/20200319143305983.bmp?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0plZ3JldA==,size_16,color_FFFFFF,t_70"><br>我上网查了很多，有人说应该把腾讯手游助手等腾讯的游戏软件卸载，可是等我卸载后却并没有解决问题。<br>后来，我突发奇想打开了以前写的cpp文件，发现他竟然能够编译运行！！！（卸载腾讯手游助手后）<br>我又创建了一个新的文件，发现竟然也能运行！！！<br>只有这一个cpp文件不能运行，于是我把这个cpp文件删除了，完美地解决了这个问题。</p>
-<p>这可能因为腾讯手游助手等软件只要你运行过后，他就会修改你系统的某些东西。当你在  有腾讯手游助手  的背景下运行codeblocks的文件时，那么这个文件一但编译运行，他的内在就被修改了，即使你把腾讯手游助手卸载了，它也被修改了，所以这个文件就完了。（这就是一开始我以为卸载后没有解决问题的原因，因为我还在死扣那个坏文件）<br>但是当你把腾讯手游助手这类软件卸载了，再打开以前写的文件，由于他没有在 有腾讯手游助手  的背景下编译运行过，所以他没事，能够正常使用，同理，创建新文件能运行也是这个道理。<br>总的来说，应该就是腾讯手游助手这类软件为了游戏的正常使用而不得已修改一些系统的东西，造成了这个后果，将其卸载后再把不能运行的cpp（cbp）文件删除即可得到舒服的codeblocks使用环境了。</p>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>codeblocks</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实验一：顺序表及其应用——顺序表的基本操作及有序表的合并</title>
     <url>/2021/01/28/%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9A%E9%A1%BA%E5%BA%8F%E8%A1%A8%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E2%80%94%E2%80%94%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%8F%8A%E6%9C%89%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%90%88%E5%B9%B6/</url>
     <content><![CDATA[<h1 id="【实验目的】"><a href="#【实验目的】" class="headerlink" title="【实验目的】"></a>【实验目的】</h1><p>帮助学生熟练掌握线性表的顺序存储结构（顺序表）的基本操作及其简单应用，实现两个有序表的合并操作。</p>
@@ -450,243 +450,6 @@
       </categories>
       <tags>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JDBC笔记</title>
-    <url>/2021/07/18/JDBC%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="一、使用详解"><a href="#一、使用详解" class="headerlink" title="一、使用详解"></a>一、使用详解</h1><ul>
-<li>在mysql中创建一个库shen，并创建user表和插入表的数据。</li>
-<li>新建一个Java工程jdbc，并导入数据驱动。</li>
-</ul>
-<h1 id="二、详细步骤"><a href="#二、详细步骤" class="headerlink" title="二、详细步骤"></a>二、详细步骤</h1><h2 id="1、加载数据库驱动"><a href="#1、加载数据库驱动" class="headerlink" title="1、加载数据库驱动"></a>1、加载数据库驱动</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.加载驱动(开发推荐的方式) mysql版本5.x方法</span></span><br><span class="line">Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//mysql8.x方法</span></span><br><span class="line">Class.forName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、建立连接"><a href="#2、建立连接" class="headerlink" title="2、建立连接"></a>2、建立连接</h2><h3 id="1、数据库URL"><a href="#1、数据库URL" class="headerlink" title="1、数据库URL"></a>1、数据库URL</h3><p>URL用于标识数据库的位置，程序员通过URL地址告诉JDBC程序连接哪个数据库，URL的写法为:</p>
-<p>jdbc:mysql:［］//localhost:3306/shen ?参数名：参数值</p>
-<p>常用数据库URL地址的写法：</p>
-<ul>
-<li>Oracle：jdbc:oracle:thin:@localhost:1521:shen</li>
-<li>SqlServer：jdbc:microsoft:sqlserver://localhost:1433; DatabaseName=shen</li>
-<li>MySql：jdbc:mysql://localhost:3306/shen</li>
-</ul>
-<p><strong>注意：如果是localhost:3306，mysql可以简写为jdbc:mysql:///sid（尽量不这样）</strong></p>
-<h3 id="2、Connection"><a href="#2、Connection" class="headerlink" title="2、Connection"></a>2、Connection</h3><p>Jdbc程序中的Connection，它用于代表数据库的链接，Collection是数据库编程中最重要的一个对象，客户端与数据库所有交互都是通过connection对象完成的，创建方法为：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Connection conn = DriverManager.getConnection(url,user,pass); </span><br></pre></td></tr></table></figure>
-
-<p>这个对象的常用方法：</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>createStatement()</td>
-<td>创建向数据库发送sql的statement对象。</td>
-</tr>
-<tr>
-<td>prepareStatement(sql)</td>
-<td>创建向数据库发送预编译sql的PrepareSatement对象。</td>
-</tr>
-<tr>
-<td>prepareCall(sql)</td>
-<td>创建执行存储过程的callableStatement对象。</td>
-</tr>
-<tr>
-<td>setAutoCommit(boolean autoCommit)</td>
-<td>设置事务是否自动提交。</td>
-</tr>
-<tr>
-<td>commit()</td>
-<td>在链接上提交事务。</td>
-</tr>
-<tr>
-<td>rollback()</td>
-<td>在此链接上回滚事务。</td>
-</tr>
-</tbody></table>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String url = <span class="string">&quot;jdbc:mysql://localhost:3306/shen&quot;</span>;</span><br><span class="line">String username = <span class="string">&quot;shen&quot;</span>;</span><br><span class="line">String password = <span class="string">&quot;Anxin062039&quot;</span>;</span><br><span class="line">Connection conn = <span class="keyword">null</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//2.获取与数据库的链接</span></span><br><span class="line">conn = DriverManager.getConnection(url, username, password);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3、执行SQL语句"><a href="#3、执行SQL语句" class="headerlink" title="3、执行SQL语句"></a>3、执行SQL语句</h2><h3 id="1、Statement"><a href="#1、Statement" class="headerlink" title="1、Statement"></a>1、Statement</h3><p>Jdbc程序中的Statement对象用于向数据库发送SQL语句，创建方法为：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Statement st = conn.createStatement();</span><br></pre></td></tr></table></figure>
-
-<p> Statement对象常用方法：</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>executeQuery(String sql)</td>
-<td>用于向数据发送查询语句。</td>
-</tr>
-<tr>
-<td>executeUpdate(String sql)</td>
-<td>用于向数据库发送insert、update或delete语句</td>
-</tr>
-<tr>
-<td>execute(String sql)</td>
-<td>用于向数据库发送任意sql语句</td>
-</tr>
-<tr>
-<td>addBatch(String sql)</td>
-<td>把多条sql语句放到一个批处理中。</td>
-</tr>
-<tr>
-<td>executeBatch()</td>
-<td>向数据库发送一批sql语句执行。</td>
-</tr>
-</tbody></table>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Statement st = <span class="keyword">null</span>;</span><br><span class="line"><span class="comment">//3.获取用于向数据库发送sql语句的statement</span></span><br><span class="line">st = conn.createStatement();</span><br><span class="line"><span class="comment">//4.向数据库发sql</span></span><br><span class="line">String sql = <span class="string">&quot;select id,name,password,email,birthday from users&quot;</span>;</span><br><span class="line">st.executeQuery(sql);</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2、PreperedStatement"><a href="#2、PreperedStatement" class="headerlink" title="2、PreperedStatement"></a>2、PreperedStatement</h3><p>PreperedStatement是Statement的孩子，它的实例对象可以通过调用：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PreperedStatement st =  conn.preparedStatement()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PreperedStatement st = <span class="keyword">null</span>;</span><br><span class="line">String sql = <span class="string">&quot;select * from users where name=? and password=?&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//3.获取用于向数据库发送sql语句的Preperedstatement</span></span><br><span class="line">st = conn.preparedStatement(sql);<span class="comment">//在此次传入，进行预编译</span></span><br><span class="line">st.setString(<span class="number">1</span>, username);</span><br><span class="line">st.setString(<span class="number">2</span>, password);</span><br><span class="line"><span class="comment">//4.向数据库发sql</span></span><br><span class="line">st.executeQuery();<span class="comment">//在这里不需要传入sql</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>比较：相对于Statement对象而言</p>
-<ul>
-<li><p>PreperedStatement可以避免SQL注入的问题。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">如：String sql=<span class="string">&quot;select * from admin where loginname=&#x27;&quot;</span>+loginName+<span class="string">&quot;&#x27; and loginpwd=&#x27;&quot;</span>+loginPwd+<span class="string">&quot;&#x27;&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        在应用中：</span></span><br><span class="line"><span class="comment">//            -&gt;请输入账号：333</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//            -&gt;请输入密码：wer&#x27;or&#x27;1&#x27;=&#x27;1</span></span><br><span class="line"><span class="comment">//        实际上发送：select * from admin where loginname=&#x27;333&#x27; and   //loginpwd=&#x27;wer&#x27;or&#x27;1&#x27;=&#x27;1&#x27;，登录成功！</span></span><br></pre></td></tr></table></figure></li>
-<li><p>Statement会使数据库频繁编译SQL，可能造成数据库缓冲区溢出。PreparedStatement 可对SQL进行预编译，从而提高数据库的执行效率。</p>
-</li>
-<li><p>并且PreperedStatement对于sql中的参数，允许使用占位符的形式进行替换，简化sql语句的编写。</p>
-</li>
-</ul>
-<h2 id="4、获取结果"><a href="#4、获取结果" class="headerlink" title="4、获取结果"></a>4、获取结果</h2><p>​        Jdbc程序中的ResultSet用于代表Sql语句的执行结果。Resultset封装执行结果时，采用的类似于表格的方式，ResultSet 对象维护了一个指向表格数据行的游标，初始的时候，游标在第一行之前，调用ResultSet.next() 方法，可以使游标指向具体的数据行，进行调用方法获取该行的数据。</p>
-<h3 id="1、获取行"><a href="#1、获取行" class="headerlink" title="1、获取行"></a>1、获取行</h3><p>ResultSet提供了对结果集进行滚动的方法：</p>
-<ul>
-<li>next()：移动到下一行</li>
-<li>Previous()：移动到前一行</li>
-<li>absolute(int row)：移动到指定行</li>
-<li>beforeFirst()：移动resultSet的最前面。</li>
-<li>afterLast() ：移动到resultSet的最后面。</li>
-</ul>
-<h3 id="2、获取值"><a href="#2、获取值" class="headerlink" title="2、获取值"></a>2、获取值</h3><p>ResultSet既然用于封装执行结果的，所以该对象提供的都是用于获取数据的get方法：</p>
-<ul>
-<li><p>获取任意类型的数据</p>
-<p>getObject(int index)</p>
-<p>getObject(string columnName)</p>
-</li>
-<li><p>获取指定类型的数据，例如：</p>
-<p>getString(int index)</p>
-<p>getString(String columnName)</p>
-</li>
-</ul>
-<p>附加：</p>
-<p>常用数据类型转换：</p>
-<table>
-<thead>
-<tr>
-<th>SQL类型</th>
-<th>Jdbc对应方法</th>
-<th>返回类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>bit(1)，bit(n)</td>
-<td>getBoolean，getBytes()</td>
-<td>Boolean，byte[]</td>
-</tr>
-<tr>
-<td>tinyint</td>
-<td>getByte()</td>
-<td>Byte</td>
-</tr>
-<tr>
-<td>smallint</td>
-<td>getShort()</td>
-<td>Short</td>
-</tr>
-<tr>
-<td>int</td>
-<td>getInt</td>
-<td>Int</td>
-</tr>
-<tr>
-<td>bigint</td>
-<td>getLong()</td>
-<td>Long</td>
-</tr>
-<tr>
-<td>char,varchar,longvarchar</td>
-<td>getString</td>
-<td>String</td>
-</tr>
-<tr>
-<td>text(clob) blob</td>
-<td>getClob()，getblob()</td>
-<td>Clob，blob</td>
-</tr>
-<tr>
-<td>date</td>
-<td>getDate()</td>
-<td>java.sql.Date</td>
-</tr>
-<tr>
-<td>time</td>
-<td>getTime()</td>
-<td>java.sql.Time</td>
-</tr>
-<tr>
-<td>timestamp</td>
-<td>getTimestamp</td>
-<td>java.sql.Timestamp</td>
-</tr>
-</tbody></table>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line"><span class="comment">//4.向数据库发sql,并获取代表结果集的resultset</span></span><br><span class="line">String sql = <span class="string">&quot;select id,name,password,email,birthday from users&quot;</span>;</span><br><span class="line">rs = st.executeQuery(sql);</span><br><span class="line">			</span><br><span class="line"><span class="comment">//5.取出结果集的数据</span></span><br><span class="line">rs.afterLast();</span><br><span class="line">rs.previous();</span><br><span class="line">System.out.println(<span class="string">&quot;id=&quot;</span> + rs.getObject(<span class="string">&quot;id&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;name=&quot;</span> + rs.getObject(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;password=&quot;</span> + rs.getObject(<span class="string">&quot;password&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;email=&quot;</span> + rs.getObject(<span class="string">&quot;email&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;birthday=&quot;</span> + rs.getObject(<span class="string">&quot;birthday&quot;</span>));</span><br></pre></td></tr></table></figure>
-
-
-
-<p>或者</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//循环取出(id)</span></span><br><span class="line"><span class="keyword">while</span>(rs.next())</span><br><span class="line">&#123;</span><br><span class="line">	String id=rs.getString(<span class="number">1</span>);<span class="comment">//1代表数据库中表的列数，id在第一列也可以(&quot;id&quot;)！！！</span></span><br><span class="line">	System.out.println(id+<span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="5、释放资源"><a href="#5、释放资源" class="headerlink" title="5、释放资源"></a>5、释放资源</h2><p>​        Jdbc程序运行完后，切记要释放程序在运行过程中，创建的那些与数据库进行交互的对象，这些对象通常是ResultSet, Statement和Connection对象。</p>
-<p>注意：为确保资源释放代码能运行，资源释放代码也一定要放在finally语句中。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//6.关闭链接，释放资源</span></span><br><span class="line">	<span class="keyword">if</span>(rs!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			rs.close();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		rs = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(st!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			st.close();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">				</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="keyword">if</span>(conn!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="三、基本操作"><a href="#三、基本操作" class="headerlink" title="三、基本操作"></a>三、基本操作</h1><h2 id="1、DDL"><a href="#1、DDL" class="headerlink" title="1、DDL"></a>1、DDL</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 在java中使用ddl语句（credate,drop,backup...）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">package</span> com.shen.study2;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test1</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		Test1 test=<span class="keyword">new</span> Test1();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Test1</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.lianjie();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">lianjie</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="comment">//定义需要的对象</span></span><br><span class="line">		PreparedStatement ps=<span class="keyword">null</span>;</span><br><span class="line">		Connection ct=<span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs=<span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//初始化对象</span></span><br><span class="line">			<span class="comment">//1.加载驱动</span></span><br><span class="line">			Class.forName(<span class="string">&quot;com.microsoft.jdbc.sqlserver.SQLServerDriver&quot;</span>);</span><br><span class="line">			<span class="comment">//2.得到连接(1433表示sql server的默认端口)</span></span><br><span class="line">			ct=DriverManager.getConnection(<span class="string">&quot;jdbc:microsoft:sqlserver://localhost:1433;databaseName=shen&quot;</span>,<span class="string">&quot;sa&quot;</span>,<span class="string">&quot;Anxin062039&quot;</span>);</span><br><span class="line">			<span class="comment">//3.创建Preparestatement,创建数据</span></span><br><span class="line">			ps=ct.prepareStatement(<span class="string">&quot;create database vvv&quot;</span>);</span><br><span class="line"><span class="comment">//			ps=ct.prepareStatement(&quot;create table xxx&quot;);//创建表</span></span><br><span class="line"><span class="comment">//			ps=ct.prepareStatement(&quot;backup database shen to disk=&#x27;F:/123.bak&#x27;&quot;);//备份数据库</span></span><br><span class="line">			</span><br><span class="line">			<span class="comment">//如果执行的是ddl语句</span></span><br><span class="line">			<span class="keyword">boolean</span> b=ps.execute();</span><br><span class="line">			<span class="keyword">if</span>(b)</span><br><span class="line">			&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;创建成功！&quot;</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;失败&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">		&#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">			<span class="comment">//关闭资源</span></span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="comment">//为了程序健壮</span></span><br><span class="line">				<span class="keyword">if</span>(ps!=<span class="keyword">null</span>)</span><br><span class="line">					ps.close();</span><br><span class="line">				<span class="keyword">if</span>(ct!=<span class="keyword">null</span>)</span><br><span class="line">					ct.close();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (Exception e2) &#123;</span><br><span class="line">				<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">				</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、CRUD"><a href="#2、CRUD" class="headerlink" title="2、CRUD"></a>2、CRUD</h2><p>实例：user</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> String password;</span><br><span class="line">	<span class="keyword">private</span> String email;</span><br><span class="line">	<span class="keyword">private</span> Date birthday;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//相关的get和set</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>连接工具：JdbcUtils</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcUtils</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String driver = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String url = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String username = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String password = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			InputStream in = JdbcUtils.class.getClassLoader().getResourceAsStream(<span class="string">&quot;db.properties&quot;</span>);</span><br><span class="line">			Properties prop = <span class="keyword">new</span> Properties();</span><br><span class="line">			prop.load(in);</span><br><span class="line">			</span><br><span class="line">			driver = prop.getProperty(<span class="string">&quot;driver&quot;</span>);</span><br><span class="line">			url = prop.getProperty(<span class="string">&quot;url&quot;</span>);</span><br><span class="line">			username = prop.getProperty(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">			password = prop.getProperty(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			Class.forName(driver);</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> ExceptionInInitializerError(e);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> DriverManager.getConnection(url, username,password);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">release</span><span class="params">(Connection conn,Statement st,ResultSet rs)</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(rs!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">try</span>&#123;</span><br><span class="line">				rs.close();</span><br><span class="line">			&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			rs = <span class="keyword">null</span>;</span><br><span class="line"> </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(st!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">try</span>&#123;</span><br><span class="line">				st.close();</span><br><span class="line">			&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(conn!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">try</span>&#123;</span><br><span class="line">				conn.close();</span><br><span class="line">			&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>资源文件：db.properties</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">#driver=com.mysql.jdbc.Driver</span><br><span class="line">#url=jdbc:mysql:<span class="comment">//localhost:3306/shen</span></span><br><span class="line">#username=shen</span><br><span class="line">#password=Anxin062039</span><br></pre></td></tr></table></figure>
-
-
-
-<p>功能实现：Demo</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> cn.itcast.utils.JdbcUtils;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//使用jdbc对数据库增删改查</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			String sql = <span class="string">&quot;insert into users(id,name,password,email,birthday) values(4,&#x27;xxx&#x27;,&#x27;123&#x27;,&#x27;xx@sina.com&#x27;,to_date(&#x27;1980-09-09&#x27;,&#x27;YYYY-MM-DD&#x27;))&quot;</span>;</span><br><span class="line">			<span class="keyword">int</span> num = st.executeUpdate(sql);  <span class="comment">//update</span></span><br><span class="line">			<span class="keyword">if</span>(num&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;插入成功！！&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			String sql = <span class="string">&quot;delete from users where id=4&quot;</span>;</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			<span class="keyword">int</span> num = st.executeUpdate(sql);</span><br><span class="line">			<span class="keyword">if</span>(num&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;删除成功！！&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			String sql = <span class="string">&quot;update users set name=&#x27;wuwang&#x27;,email=&#x27;wuwang@sina.com&#x27; where id=3&quot;</span>;</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			<span class="keyword">int</span> num = st.executeUpdate(sql);</span><br><span class="line">			<span class="keyword">if</span>(num&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;更新成功！！&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">find</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			String sql = <span class="string">&quot;select * from users where id=1&quot;</span>;</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			rs = st.executeQuery(sql);</span><br><span class="line">			<span class="keyword">if</span>(rs.next())&#123;</span><br><span class="line">				System.out.println(rs.getString(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="JdbcUtil"><a href="#JdbcUtil" class="headerlink" title="JdbcUtil"></a>JdbcUtil</h1><p>完整的JdbcUtil工具包</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.egret.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcUtil</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String url;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String username;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String password;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String driver;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		<span class="comment">// 读取资源文件,获取值</span></span><br><span class="line">		<span class="comment">// 创建properties集合类</span></span><br><span class="line">		Properties properties = <span class="keyword">new</span> Properties();</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">// 获取src路径下的文件的⽅式---&gt;ClassLoader 类加载器</span></span><br><span class="line">			ClassLoader classLoader = JdbcUtil.class.getClassLoader();</span><br><span class="line"></span><br><span class="line">			<span class="comment">// URL表示统⼀资源标识符</span></span><br><span class="line">			URL res = classLoader.getResource(<span class="string">&quot;jdbc.properties&quot;</span>);</span><br><span class="line">			String path = res.getPath();</span><br><span class="line">			System.out.println(path);</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 2. 加载文件</span></span><br><span class="line">			properties.load(<span class="keyword">new</span> FileReader(path));</span><br><span class="line">			url = properties.getProperty(<span class="string">&quot;url&quot;</span>);</span><br><span class="line">			username = properties.getProperty(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">			password = properties.getProperty(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">			driver = properties.getProperty(<span class="string">&quot;driver&quot;</span>);</span><br><span class="line">			Class.forName(driver);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取连接</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> 连接对象</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> DriverManager.getConnection(url, username, password);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/***</span></span><br><span class="line"><span class="comment">	 * DML操作（增删改） 1.获取连接数据库对象 2.预处理 3.执行更新操作</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> sql</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> obj</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">// 调用者只需传入一个sql语句，和一个Object数组。该数组存储的是SQL语句中的占位符</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">executeUpdate</span><span class="params">(String sql, Object... obj)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		Connection con = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			con = getConnection(); <span class="comment">// 调用getConnection()方法连接数据库</span></span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e1) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e1.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		PreparedStatement ps = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			ps = con.prepareStatement(sql);<span class="comment">// 预处理</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; obj.length; i++) &#123;<span class="comment">// 预处理声明占位符</span></span><br><span class="line">				ps.setObject(i + <span class="number">1</span>, obj[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">int</span> count = ps.executeUpdate();<span class="comment">// 执行更新操作</span></span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">			close(<span class="keyword">null</span>, ps, con);<span class="comment">// 调用close()方法关闭资源</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/***</span></span><br><span class="line"><span class="comment">	 * DQL查询 Result获取数据集</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> sql</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> obj</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> List&lt;Map&lt;String, Object&gt;&gt; executeQuery(String sql, Object... obj) &#123;</span><br><span class="line">		Connection con = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			con = getConnection();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e1) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e1.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		PreparedStatement ps = <span class="keyword">null</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			ps = con.prepareStatement(sql);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; obj.length; i++) &#123;</span><br><span class="line">				ps.setObject(i + <span class="number">1</span>, obj[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			rs = ps.executeQuery();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// new 一个空的list集合用来存放查询结果</span></span><br><span class="line">			List&lt;Map&lt;String, Object&gt;&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 获取结果集的列数</span></span><br><span class="line">			<span class="keyword">int</span> count = rs.getMetaData().getColumnCount();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 对结果集遍历每一条数据是一个Map集合，列是key,值是value</span></span><br><span class="line">			<span class="keyword">while</span> (rs.next()) &#123;</span><br><span class="line">				<span class="comment">// 一个空的map集合，用来存放每一行数据</span></span><br><span class="line">				Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">					Object ob = rs.getObject(i + <span class="number">1</span>);<span class="comment">// 获取值</span></span><br><span class="line">					String key = rs.getMetaData().getColumnName(i + <span class="number">1</span>);<span class="comment">// 获取k即列名</span></span><br><span class="line">					map.put(key, ob);</span><br><span class="line">				&#125;</span><br><span class="line">				list.add(map);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> list;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">			close(rs, ps, con);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 释放资源</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> rs</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> ps</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> conn</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(ResultSet rs, PreparedStatement ps, Connection conn)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (rs != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				rs.close();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">				<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">				e.printStackTrace();</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (ps != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					ps.close();</span><br><span class="line">				&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">					<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (conn != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					conn.close();</span><br><span class="line">				&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">					<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>JDBC</tag>
       </tags>
   </entry>
   <entry>
@@ -1000,6 +763,243 @@
       </categories>
       <tags>
         <tag>正则表达式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JDBC笔记</title>
+    <url>/2021/07/18/JDBC%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="一、使用详解"><a href="#一、使用详解" class="headerlink" title="一、使用详解"></a>一、使用详解</h1><ul>
+<li>在mysql中创建一个库shen，并创建user表和插入表的数据。</li>
+<li>新建一个Java工程jdbc，并导入数据驱动。</li>
+</ul>
+<h1 id="二、详细步骤"><a href="#二、详细步骤" class="headerlink" title="二、详细步骤"></a>二、详细步骤</h1><h2 id="1、加载数据库驱动"><a href="#1、加载数据库驱动" class="headerlink" title="1、加载数据库驱动"></a>1、加载数据库驱动</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.加载驱动(开发推荐的方式) mysql版本5.x方法</span></span><br><span class="line">Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//mysql8.x方法</span></span><br><span class="line">Class.forName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、建立连接"><a href="#2、建立连接" class="headerlink" title="2、建立连接"></a>2、建立连接</h2><h3 id="1、数据库URL"><a href="#1、数据库URL" class="headerlink" title="1、数据库URL"></a>1、数据库URL</h3><p>URL用于标识数据库的位置，程序员通过URL地址告诉JDBC程序连接哪个数据库，URL的写法为:</p>
+<p>jdbc:mysql:［］//localhost:3306/shen ?参数名：参数值</p>
+<p>常用数据库URL地址的写法：</p>
+<ul>
+<li>Oracle：jdbc:oracle:thin:@localhost:1521:shen</li>
+<li>SqlServer：jdbc:microsoft:sqlserver://localhost:1433; DatabaseName=shen</li>
+<li>MySql：jdbc:mysql://localhost:3306/shen</li>
+</ul>
+<p><strong>注意：如果是localhost:3306，mysql可以简写为jdbc:mysql:///sid（尽量不这样）</strong></p>
+<h3 id="2、Connection"><a href="#2、Connection" class="headerlink" title="2、Connection"></a>2、Connection</h3><p>Jdbc程序中的Connection，它用于代表数据库的链接，Collection是数据库编程中最重要的一个对象，客户端与数据库所有交互都是通过connection对象完成的，创建方法为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Connection conn = DriverManager.getConnection(url,user,pass); </span><br></pre></td></tr></table></figure>
+
+<p>这个对象的常用方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>createStatement()</td>
+<td>创建向数据库发送sql的statement对象。</td>
+</tr>
+<tr>
+<td>prepareStatement(sql)</td>
+<td>创建向数据库发送预编译sql的PrepareSatement对象。</td>
+</tr>
+<tr>
+<td>prepareCall(sql)</td>
+<td>创建执行存储过程的callableStatement对象。</td>
+</tr>
+<tr>
+<td>setAutoCommit(boolean autoCommit)</td>
+<td>设置事务是否自动提交。</td>
+</tr>
+<tr>
+<td>commit()</td>
+<td>在链接上提交事务。</td>
+</tr>
+<tr>
+<td>rollback()</td>
+<td>在此链接上回滚事务。</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String url = <span class="string">&quot;jdbc:mysql://localhost:3306/shen&quot;</span>;</span><br><span class="line">String username = <span class="string">&quot;shen&quot;</span>;</span><br><span class="line">String password = <span class="string">&quot;Anxin062039&quot;</span>;</span><br><span class="line">Connection conn = <span class="keyword">null</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//2.获取与数据库的链接</span></span><br><span class="line">conn = DriverManager.getConnection(url, username, password);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、执行SQL语句"><a href="#3、执行SQL语句" class="headerlink" title="3、执行SQL语句"></a>3、执行SQL语句</h2><h3 id="1、Statement"><a href="#1、Statement" class="headerlink" title="1、Statement"></a>1、Statement</h3><p>Jdbc程序中的Statement对象用于向数据库发送SQL语句，创建方法为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Statement st = conn.createStatement();</span><br></pre></td></tr></table></figure>
+
+<p> Statement对象常用方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>executeQuery(String sql)</td>
+<td>用于向数据发送查询语句。</td>
+</tr>
+<tr>
+<td>executeUpdate(String sql)</td>
+<td>用于向数据库发送insert、update或delete语句</td>
+</tr>
+<tr>
+<td>execute(String sql)</td>
+<td>用于向数据库发送任意sql语句</td>
+</tr>
+<tr>
+<td>addBatch(String sql)</td>
+<td>把多条sql语句放到一个批处理中。</td>
+</tr>
+<tr>
+<td>executeBatch()</td>
+<td>向数据库发送一批sql语句执行。</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Statement st = <span class="keyword">null</span>;</span><br><span class="line"><span class="comment">//3.获取用于向数据库发送sql语句的statement</span></span><br><span class="line">st = conn.createStatement();</span><br><span class="line"><span class="comment">//4.向数据库发sql</span></span><br><span class="line">String sql = <span class="string">&quot;select id,name,password,email,birthday from users&quot;</span>;</span><br><span class="line">st.executeQuery(sql);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、PreperedStatement"><a href="#2、PreperedStatement" class="headerlink" title="2、PreperedStatement"></a>2、PreperedStatement</h3><p>PreperedStatement是Statement的孩子，它的实例对象可以通过调用：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PreperedStatement st =  conn.preparedStatement()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">PreperedStatement st = <span class="keyword">null</span>;</span><br><span class="line">String sql = <span class="string">&quot;select * from users where name=? and password=?&quot;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//3.获取用于向数据库发送sql语句的Preperedstatement</span></span><br><span class="line">st = conn.preparedStatement(sql);<span class="comment">//在此次传入，进行预编译</span></span><br><span class="line">st.setString(<span class="number">1</span>, username);</span><br><span class="line">st.setString(<span class="number">2</span>, password);</span><br><span class="line"><span class="comment">//4.向数据库发sql</span></span><br><span class="line">st.executeQuery();<span class="comment">//在这里不需要传入sql</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>比较：相对于Statement对象而言</p>
+<ul>
+<li><p>PreperedStatement可以避免SQL注入的问题。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">如：String sql=<span class="string">&quot;select * from admin where loginname=&#x27;&quot;</span>+loginName+<span class="string">&quot;&#x27; and loginpwd=&#x27;&quot;</span>+loginPwd+<span class="string">&quot;&#x27;&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        在应用中：</span></span><br><span class="line"><span class="comment">//            -&gt;请输入账号：333</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//            -&gt;请输入密码：wer&#x27;or&#x27;1&#x27;=&#x27;1</span></span><br><span class="line"><span class="comment">//        实际上发送：select * from admin where loginname=&#x27;333&#x27; and   //loginpwd=&#x27;wer&#x27;or&#x27;1&#x27;=&#x27;1&#x27;，登录成功！</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Statement会使数据库频繁编译SQL，可能造成数据库缓冲区溢出。PreparedStatement 可对SQL进行预编译，从而提高数据库的执行效率。</p>
+</li>
+<li><p>并且PreperedStatement对于sql中的参数，允许使用占位符的形式进行替换，简化sql语句的编写。</p>
+</li>
+</ul>
+<h2 id="4、获取结果"><a href="#4、获取结果" class="headerlink" title="4、获取结果"></a>4、获取结果</h2><p>​        Jdbc程序中的ResultSet用于代表Sql语句的执行结果。Resultset封装执行结果时，采用的类似于表格的方式，ResultSet 对象维护了一个指向表格数据行的游标，初始的时候，游标在第一行之前，调用ResultSet.next() 方法，可以使游标指向具体的数据行，进行调用方法获取该行的数据。</p>
+<h3 id="1、获取行"><a href="#1、获取行" class="headerlink" title="1、获取行"></a>1、获取行</h3><p>ResultSet提供了对结果集进行滚动的方法：</p>
+<ul>
+<li>next()：移动到下一行</li>
+<li>Previous()：移动到前一行</li>
+<li>absolute(int row)：移动到指定行</li>
+<li>beforeFirst()：移动resultSet的最前面。</li>
+<li>afterLast() ：移动到resultSet的最后面。</li>
+</ul>
+<h3 id="2、获取值"><a href="#2、获取值" class="headerlink" title="2、获取值"></a>2、获取值</h3><p>ResultSet既然用于封装执行结果的，所以该对象提供的都是用于获取数据的get方法：</p>
+<ul>
+<li><p>获取任意类型的数据</p>
+<p>getObject(int index)</p>
+<p>getObject(string columnName)</p>
+</li>
+<li><p>获取指定类型的数据，例如：</p>
+<p>getString(int index)</p>
+<p>getString(String columnName)</p>
+</li>
+</ul>
+<p>附加：</p>
+<p>常用数据类型转换：</p>
+<table>
+<thead>
+<tr>
+<th>SQL类型</th>
+<th>Jdbc对应方法</th>
+<th>返回类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bit(1)，bit(n)</td>
+<td>getBoolean，getBytes()</td>
+<td>Boolean，byte[]</td>
+</tr>
+<tr>
+<td>tinyint</td>
+<td>getByte()</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>smallint</td>
+<td>getShort()</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>getInt</td>
+<td>Int</td>
+</tr>
+<tr>
+<td>bigint</td>
+<td>getLong()</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>char,varchar,longvarchar</td>
+<td>getString</td>
+<td>String</td>
+</tr>
+<tr>
+<td>text(clob) blob</td>
+<td>getClob()，getblob()</td>
+<td>Clob，blob</td>
+</tr>
+<tr>
+<td>date</td>
+<td>getDate()</td>
+<td>java.sql.Date</td>
+</tr>
+<tr>
+<td>time</td>
+<td>getTime()</td>
+<td>java.sql.Time</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>getTimestamp</td>
+<td>java.sql.Timestamp</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line"><span class="comment">//4.向数据库发sql,并获取代表结果集的resultset</span></span><br><span class="line">String sql = <span class="string">&quot;select id,name,password,email,birthday from users&quot;</span>;</span><br><span class="line">rs = st.executeQuery(sql);</span><br><span class="line">			</span><br><span class="line"><span class="comment">//5.取出结果集的数据</span></span><br><span class="line">rs.afterLast();</span><br><span class="line">rs.previous();</span><br><span class="line">System.out.println(<span class="string">&quot;id=&quot;</span> + rs.getObject(<span class="string">&quot;id&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;name=&quot;</span> + rs.getObject(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;password=&quot;</span> + rs.getObject(<span class="string">&quot;password&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;email=&quot;</span> + rs.getObject(<span class="string">&quot;email&quot;</span>));</span><br><span class="line">System.out.println(<span class="string">&quot;birthday=&quot;</span> + rs.getObject(<span class="string">&quot;birthday&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>或者</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//循环取出(id)</span></span><br><span class="line"><span class="keyword">while</span>(rs.next())</span><br><span class="line">&#123;</span><br><span class="line">	String id=rs.getString(<span class="number">1</span>);<span class="comment">//1代表数据库中表的列数，id在第一列也可以(&quot;id&quot;)！！！</span></span><br><span class="line">	System.out.println(id+<span class="string">&quot; &quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、释放资源"><a href="#5、释放资源" class="headerlink" title="5、释放资源"></a>5、释放资源</h2><p>​        Jdbc程序运行完后，切记要释放程序在运行过程中，创建的那些与数据库进行交互的对象，这些对象通常是ResultSet, Statement和Connection对象。</p>
+<p>注意：为确保资源释放代码能运行，资源释放代码也一定要放在finally语句中。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//6.关闭链接，释放资源</span></span><br><span class="line">	<span class="keyword">if</span>(rs!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			rs.close();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		rs = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(st!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			st.close();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">				</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="keyword">if</span>(conn!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="三、基本操作"><a href="#三、基本操作" class="headerlink" title="三、基本操作"></a>三、基本操作</h1><h2 id="1、DDL"><a href="#1、DDL" class="headerlink" title="1、DDL"></a>1、DDL</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 在java中使用ddl语句（credate,drop,backup...）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">package</span> com.shen.study2;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test1</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		Test1 test=<span class="keyword">new</span> Test1();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Test1</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.lianjie();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">lianjie</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="comment">//定义需要的对象</span></span><br><span class="line">		PreparedStatement ps=<span class="keyword">null</span>;</span><br><span class="line">		Connection ct=<span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs=<span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//初始化对象</span></span><br><span class="line">			<span class="comment">//1.加载驱动</span></span><br><span class="line">			Class.forName(<span class="string">&quot;com.microsoft.jdbc.sqlserver.SQLServerDriver&quot;</span>);</span><br><span class="line">			<span class="comment">//2.得到连接(1433表示sql server的默认端口)</span></span><br><span class="line">			ct=DriverManager.getConnection(<span class="string">&quot;jdbc:microsoft:sqlserver://localhost:1433;databaseName=shen&quot;</span>,<span class="string">&quot;sa&quot;</span>,<span class="string">&quot;Anxin062039&quot;</span>);</span><br><span class="line">			<span class="comment">//3.创建Preparestatement,创建数据</span></span><br><span class="line">			ps=ct.prepareStatement(<span class="string">&quot;create database vvv&quot;</span>);</span><br><span class="line"><span class="comment">//			ps=ct.prepareStatement(&quot;create table xxx&quot;);//创建表</span></span><br><span class="line"><span class="comment">//			ps=ct.prepareStatement(&quot;backup database shen to disk=&#x27;F:/123.bak&#x27;&quot;);//备份数据库</span></span><br><span class="line">			</span><br><span class="line">			<span class="comment">//如果执行的是ddl语句</span></span><br><span class="line">			<span class="keyword">boolean</span> b=ps.execute();</span><br><span class="line">			<span class="keyword">if</span>(b)</span><br><span class="line">			&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;创建成功！&quot;</span>);</span><br><span class="line">			&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;失败&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">		&#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">			<span class="comment">//关闭资源</span></span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="comment">//为了程序健壮</span></span><br><span class="line">				<span class="keyword">if</span>(ps!=<span class="keyword">null</span>)</span><br><span class="line">					ps.close();</span><br><span class="line">				<span class="keyword">if</span>(ct!=<span class="keyword">null</span>)</span><br><span class="line">					ct.close();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (Exception e2) &#123;</span><br><span class="line">				<span class="comment">// <span class="doctag">TODO:</span> handle exception</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">				</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、CRUD"><a href="#2、CRUD" class="headerlink" title="2、CRUD"></a>2、CRUD</h2><p>实例：user</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> String password;</span><br><span class="line">	<span class="keyword">private</span> String email;</span><br><span class="line">	<span class="keyword">private</span> Date birthday;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//相关的get和set</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>连接工具：JdbcUtils</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcUtils</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String driver = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String url = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String username = <span class="keyword">null</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String password = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			InputStream in = JdbcUtils.class.getClassLoader().getResourceAsStream(<span class="string">&quot;db.properties&quot;</span>);</span><br><span class="line">			Properties prop = <span class="keyword">new</span> Properties();</span><br><span class="line">			prop.load(in);</span><br><span class="line">			</span><br><span class="line">			driver = prop.getProperty(<span class="string">&quot;driver&quot;</span>);</span><br><span class="line">			url = prop.getProperty(<span class="string">&quot;url&quot;</span>);</span><br><span class="line">			username = prop.getProperty(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">			password = prop.getProperty(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			Class.forName(driver);</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> ExceptionInInitializerError(e);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException</span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> DriverManager.getConnection(url, username,password);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">release</span><span class="params">(Connection conn,Statement st,ResultSet rs)</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(rs!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">try</span>&#123;</span><br><span class="line">				rs.close();</span><br><span class="line">			&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			rs = <span class="keyword">null</span>;</span><br><span class="line"> </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(st!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">try</span>&#123;</span><br><span class="line">				st.close();</span><br><span class="line">			&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(conn!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			<span class="keyword">try</span>&#123;</span><br><span class="line">				conn.close();</span><br><span class="line">			&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>资源文件：db.properties</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">#driver=com.mysql.jdbc.Driver</span><br><span class="line">#url=jdbc:mysql:<span class="comment">//localhost:3306/shen</span></span><br><span class="line">#username=shen</span><br><span class="line">#password=Anxin062039</span><br></pre></td></tr></table></figure>
+
+
+
+<p>功能实现：Demo</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> cn.itcast.utils.JdbcUtils;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//使用jdbc对数据库增删改查</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			String sql = <span class="string">&quot;insert into users(id,name,password,email,birthday) values(4,&#x27;xxx&#x27;,&#x27;123&#x27;,&#x27;xx@sina.com&#x27;,to_date(&#x27;1980-09-09&#x27;,&#x27;YYYY-MM-DD&#x27;))&quot;</span>;</span><br><span class="line">			<span class="keyword">int</span> num = st.executeUpdate(sql);  <span class="comment">//update</span></span><br><span class="line">			<span class="keyword">if</span>(num&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;插入成功！！&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			String sql = <span class="string">&quot;delete from users where id=4&quot;</span>;</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			<span class="keyword">int</span> num = st.executeUpdate(sql);</span><br><span class="line">			<span class="keyword">if</span>(num&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;删除成功！！&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			String sql = <span class="string">&quot;update users set name=&#x27;wuwang&#x27;,email=&#x27;wuwang@sina.com&#x27; where id=3&quot;</span>;</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			<span class="keyword">int</span> num = st.executeUpdate(sql);</span><br><span class="line">			<span class="keyword">if</span>(num&gt;<span class="number">0</span>)&#123;</span><br><span class="line">				System.out.println(<span class="string">&quot;更新成功！！&quot;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">find</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		Statement st = <span class="keyword">null</span>;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			conn = JdbcUtils.getConnection();</span><br><span class="line">			String sql = <span class="string">&quot;select * from users where id=1&quot;</span>;</span><br><span class="line">			st = conn.createStatement();</span><br><span class="line">			rs = st.executeQuery(sql);</span><br><span class="line">			<span class="keyword">if</span>(rs.next())&#123;</span><br><span class="line">				System.out.println(rs.getString(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			</span><br><span class="line">		&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">			JdbcUtils.release(conn, st, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="JdbcUtil"><a href="#JdbcUtil" class="headerlink" title="JdbcUtil"></a>JdbcUtil</h1><p>完整的JdbcUtil工具包</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.egret.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcUtil</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String url;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String username;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String password;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String driver;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		<span class="comment">// 读取资源文件,获取值</span></span><br><span class="line">		<span class="comment">// 创建properties集合类</span></span><br><span class="line">		Properties properties = <span class="keyword">new</span> Properties();</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">// 获取src路径下的文件的⽅式---&gt;ClassLoader 类加载器</span></span><br><span class="line">			ClassLoader classLoader = JdbcUtil.class.getClassLoader();</span><br><span class="line"></span><br><span class="line">			<span class="comment">// URL表示统⼀资源标识符</span></span><br><span class="line">			URL res = classLoader.getResource(<span class="string">&quot;jdbc.properties&quot;</span>);</span><br><span class="line">			String path = res.getPath();</span><br><span class="line">			System.out.println(path);</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 2. 加载文件</span></span><br><span class="line">			properties.load(<span class="keyword">new</span> FileReader(path));</span><br><span class="line">			url = properties.getProperty(<span class="string">&quot;url&quot;</span>);</span><br><span class="line">			username = properties.getProperty(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">			password = properties.getProperty(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">			driver = properties.getProperty(<span class="string">&quot;driver&quot;</span>);</span><br><span class="line">			Class.forName(driver);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 获取连接</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> 连接对象</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> DriverManager.getConnection(url, username, password);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/***</span></span><br><span class="line"><span class="comment">	 * DML操作（增删改） 1.获取连接数据库对象 2.预处理 3.执行更新操作</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> sql</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> obj</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">// 调用者只需传入一个sql语句，和一个Object数组。该数组存储的是SQL语句中的占位符</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">executeUpdate</span><span class="params">(String sql, Object... obj)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		Connection con = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			con = getConnection(); <span class="comment">// 调用getConnection()方法连接数据库</span></span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e1) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e1.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		PreparedStatement ps = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			ps = con.prepareStatement(sql);<span class="comment">// 预处理</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; obj.length; i++) &#123;<span class="comment">// 预处理声明占位符</span></span><br><span class="line">				ps.setObject(i + <span class="number">1</span>, obj[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">int</span> count = ps.executeUpdate();<span class="comment">// 执行更新操作</span></span><br><span class="line">			</span><br><span class="line">			<span class="keyword">if</span>(count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">			close(<span class="keyword">null</span>, ps, con);<span class="comment">// 调用close()方法关闭资源</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/***</span></span><br><span class="line"><span class="comment">	 * DQL查询 Result获取数据集</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> sql</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> obj</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> List&lt;Map&lt;String, Object&gt;&gt; executeQuery(String sql, Object... obj) &#123;</span><br><span class="line">		Connection con = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			con = getConnection();</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e1) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e1.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">		ResultSet rs = <span class="keyword">null</span>;</span><br><span class="line">		PreparedStatement ps = <span class="keyword">null</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			ps = con.prepareStatement(sql);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; obj.length; i++) &#123;</span><br><span class="line">				ps.setObject(i + <span class="number">1</span>, obj[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			rs = ps.executeQuery();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// new 一个空的list集合用来存放查询结果</span></span><br><span class="line">			List&lt;Map&lt;String, Object&gt;&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 获取结果集的列数</span></span><br><span class="line">			<span class="keyword">int</span> count = rs.getMetaData().getColumnCount();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">// 对结果集遍历每一条数据是一个Map集合，列是key,值是value</span></span><br><span class="line">			<span class="keyword">while</span> (rs.next()) &#123;</span><br><span class="line">				<span class="comment">// 一个空的map集合，用来存放每一行数据</span></span><br><span class="line">				Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">					Object ob = rs.getObject(i + <span class="number">1</span>);<span class="comment">// 获取值</span></span><br><span class="line">					String key = rs.getMetaData().getColumnName(i + <span class="number">1</span>);<span class="comment">// 获取k即列名</span></span><br><span class="line">					map.put(key, ob);</span><br><span class="line">				&#125;</span><br><span class="line">				list.add(map);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> list;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">			close(rs, ps, con);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 释放资源</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> rs</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> ps</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> conn</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">(ResultSet rs, PreparedStatement ps, Connection conn)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (rs != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				rs.close();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">				<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">				e.printStackTrace();</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (ps != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					ps.close();</span><br><span class="line">				&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">					<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (conn != <span class="keyword">null</span>) &#123;</span><br><span class="line">				<span class="keyword">try</span> &#123;</span><br><span class="line">					conn.close();</span><br><span class="line">				&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">					<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">					e.printStackTrace();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>JDBC</tag>
       </tags>
   </entry>
   <entry>
