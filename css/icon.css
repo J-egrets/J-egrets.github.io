@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "iconfont"; /* Project id  */
+    src: url('../font/iconfont.ttf?t=1629265315996') format('truetype');
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-qq:before {
+    content: "\e50b";
+    font-size: 19px;
+    color: #4CAFE9;
+  }
+  
+  .icon-github:before {
+    content: "\ea0b";
+    font-size: 19px;
+    color: #3E75C3;
+  }
+  
+  .icon-weixin:before {
+    content: "\e73b";
+    font-size: 19px;
+    color: #50B674;
+  }
